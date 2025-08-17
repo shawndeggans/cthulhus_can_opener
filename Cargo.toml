@@ -1,0 +1,15 @@
+[package]
+name = "cthulhus_can_opener"
+version = "0.1.0"
+edition = "2021"
+authors = ["Developer"]
+description = "A Rust learning project - possibly a game involving Cthulhu's can opener"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/user/cthulhus_can_opener"
+
+[dependencies]
+rand = "0.8"
+
+[dev-dependencies]
+assert_cmd = "2.0"
+predicates = "3.0"
