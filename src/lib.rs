@@ -1,18 +1,22 @@
+pub mod commands;
+pub mod errors;
+pub mod events;
+pub mod store;
+pub mod views;
+
+// Test modules
+#[cfg(test)]
+pub mod integration_tests;
+
+// Legacy module - to be removed
 pub mod game;
 
+// Re-exports for convenience
+pub use commands::*;
+pub use errors::*;
+pub use events::*;
+pub use store::*;
+pub use views::*;
+
+// Legacy export for backwards compatibility
 pub use game::Game;
-
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
-}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
-}
